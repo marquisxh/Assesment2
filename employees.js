@@ -20,7 +20,12 @@
 */
 
 //CODE HERE
-
+class Employee {
+    constructor(name, shifts) {
+      this.name = name;
+      this.shifts = shifts;
+    }
+  }
 
 
 /*
@@ -34,7 +39,19 @@
 */
 
 //CODE HERE
+const empOne = [
+    {
+        name: Jess
+        shifts: 'weekday mornings, weekday afternoons', 
+    }
+]
 
+
+class empOne extends Employee {
+    constructor(name, shifts) {
+      super(name, shifts)
+    }
+}
 /*
     Call the `getSchedule` method on the
     `empOne` object.

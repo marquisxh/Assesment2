@@ -35,9 +35,11 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce(function(acc, cv,) {
+    return acc + cv.price
+})
 
-
+console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -54,8 +56,10 @@ const cart = [
 */
 
 //CODE HERE
-
-
+const calcFinalPrice = (carTotal, couponValue, tax) => {
+    return carTotal - couponValue * tax
+}
+calcFinalPrice(7000 - 1500 * .06)
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +83,7 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+    Age demographic, Competitors, Feedback, Survey. These key factors will help a restaurant become a thriving business. 
 */
 
 /*
@@ -88,3 +92,17 @@ const cart = [
 */
 
 //CODE HERE
+const cust = [
+    {
+        name: 'Age demographic', 
+    }, 
+    {
+        name: 'Competitors', 
+    }, 
+    {
+        name: 'Feedback', 
+    },
+    {
+        name: 'Survey'
+    }
+]
