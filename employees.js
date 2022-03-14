@@ -22,8 +22,11 @@
 //CODE HERE
 class Employee {
     constructor(name, shifts) {
-      this.name = name;
-      this.shifts = shifts;
+      this.name = name,
+      this.shifts = shifts
+    }
+    getSchedule(){
+        return console.log(`${this.name} works on ${this.shifts}`)
     }
   }
 
@@ -39,26 +42,15 @@ class Employee {
 */
 
 //CODE HERE
-const empOne = [
-    {
-        name: Jess
-        shifts: 'weekday mornings, weekday afternoons', 
-    }
-]
+let empOne = new Employee ('Jess', 'weekday mornings, weekday afternoons')
 
-
-class empOne extends Employee {
-    constructor(name, shifts) {
-      super(name, shifts)
-    }
-}
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
-
+empOne.getSchedule()
 
 /*
     Make a copy of the empOne object
@@ -73,8 +65,9 @@ class empOne extends Employee {
 */
 
 //CODE HERE
+let empTwo = new Employee ('Nick', 'weekday evenings, weekday nights')
 
-
+empTwo.getSchedule()
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -100,7 +93,28 @@ class empOne extends Employee {
 */
 
 //CODE HERE
+class Manager extends Employee {
+    constructor(name,shifts, employees) {
+      super(name, shifts)
+    this.employees = employees
+    }
+    getEmployees(){
+        return console.log(`${this.name} manages ${employees}`)
+    }
+    addEmployee(){
+      return employees[emp]
+    }
+}
 
+let man1 = new Manager ('Andrew')
+let employees = ['Cece', ' Schmidt']
+let emp = 'Frank'
+
+man1.getEmployees()
+addEmployee()
+
+
+/*
 
 
 /*
@@ -115,13 +129,21 @@ class empOne extends Employee {
 */
 
 //CODE HERE
-
-
+class manager extends Manager {
+    constructor(name, employees, shifts) {
+      super(name, shifts, employees)
+    this.employees = employees
+    }
+    getEmployees(){
+        return console.log(`${this.name} manages ${employees} who works ${this.shifts}.`)
+    }
+}
+let assisMan = new manager ('Winston', 'Cece and Schmidt', 'weekday mornings, weekday afternoons' )
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
-
+assisMan.getEmployees()
 //CODE HERE
 
 /*

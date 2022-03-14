@@ -35,9 +35,9 @@ const cart = [
 
 //CODE HERE
 
-const summedPrice = cart.reduce(function(acc, cv,) {
+const summedPrice = cart.reduce((acc, cv) => {
     return acc + cv.price
-})
+},0)
 
 console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
@@ -57,9 +57,9 @@ console.log(summedPrice)
 
 //CODE HERE
 const calcFinalPrice = (carTotal, couponValue, tax) => {
-    return carTotal - couponValue * tax
+    return (carTotal * tax) + carTotal - couponValue
 }
-calcFinalPrice(7000 - 1500 * .06)
+console.log(calcFinalPrice(7000,1500,.06))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -83,7 +83,7 @@ calcFinalPrice(7000 - 1500 * .06)
 
 /*
     TEXT ANSWER HERE
-    Age demographic, Competitors, Feedback, Survey. These key factors will help a restaurant become a thriving business. 
+The restaurant will need appetizer, meal, drink and dessert from customer so they can make sure they are satisfied.
 */
 
 /*
@@ -94,15 +94,32 @@ calcFinalPrice(7000 - 1500 * .06)
 //CODE HERE
 const cust = [
     {
-        name: 'Age demographic', 
+        name: 'Marquis',
+        appetizer: 'salad',
+        meal: 'smoked salmon',
+        drink: 'lemonade',
+        dessert: 'cake'
+            
     }, 
     {
-        name: 'Competitors', 
+        name: 'John',
+        appetizer: 'chicken fingers',
+        meal: 'steak & mashed potatoes',
+        drink:'sprite',
+        dessert: 'apple pie'
     }, 
     {
-        name: 'Feedback', 
+        name: 'Edward',
+        appetizer: 'chicken wings',
+        meal: 'fish and chips',
+        drink: 'coke',
+        dessert: 'apple pie'
     },
     {
-        name: 'Survey'
+        name: 'Derrick',
+        appetizer: 'potatoe skins',
+        meal: 'ribs',
+        drink: 'root beer',
+        dessert: 'brownie'
     }
 ]
