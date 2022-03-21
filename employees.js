@@ -22,13 +22,13 @@
 //CODE HERE
 class Employee {
     constructor(name, shifts) {
-      this.name = name,
-      this.shifts = shifts
+        this.name = name,
+            this.shifts = shifts
     }
-    getSchedule(){
+    getSchedule() {
         return console.log(`${this.name} works on ${this.shifts}`)
     }
-  }
+}
 
 
 /*
@@ -42,7 +42,7 @@ class Employee {
 */
 
 //CODE HERE
-let empOne = new Employee ('Jess', 'weekday mornings, weekday afternoons')
+let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
 
 /*
     Call the `getSchedule` method on the
@@ -65,7 +65,7 @@ empOne.getSchedule()
 */
 
 //CODE HERE
-let empTwo = new Employee ('Nick', 'weekday evenings, weekday nights')
+let empTwo = new Employee('Nick', 'weekday evenings, weekday nights')
 
 empTwo.getSchedule()
 
@@ -94,24 +94,23 @@ empTwo.getSchedule()
 
 //CODE HERE
 class Manager extends Employee {
-    constructor(name,shifts, employees) {
-      super(name, shifts)
-    this.employees = employees
+    constructor(name, shifts, employees) {
+        super(name, shifts)
+        this.employees = employees
     }
-    getEmployees(){
-        return console.log(`${this.name} manages ${employees}`)
+    getEmployees() {
+        return console.log(`${this.name} manages ${this.employees}`)
     }
-    addEmployee(){
-      return employees[emp]
+    addEmployee(emp) {
+        this.employees.push(emp)
     }
 }
 
-let man1 = new Manager ('Andrew')
-let employees = ['Cece', ' Schmidt']
-let emp = 'Frank'
 
+let man1 = new Manager('Andrew', "shift", ['Jess', 'Nick'] )
+
+man1.addEmployee("Frank")
 man1.getEmployees()
-addEmployee()
 
 
 /*
@@ -129,35 +128,28 @@ addEmployee()
 */
 
 //CODE HERE
-class manager extends Manager {
-    constructor(name, employees, shifts) {
-      super(name, shifts, employees)
-    this.employees = employees
-    }
-    getEmployees(){
-        return console.log(`${this.name} manages ${employees} who works ${this.shifts}.`)
-    }
-}
-let assisMan = new manager ('Winston', 'Cece and Schmidt', 'weekday mornings, weekday afternoons' )
+
+let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', ['Cece', ' Schmidt'] )
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
-assisMan.getEmployees()
+manager.getEmployees()
 //CODE HERE
 
 /*
-    Call the `addEmployee` method on the 
-    `manager` object passing in the string 
+    Call the `addEmployee` method on the
+    `manager` object passing in the string
     'Coach' or whatever name you'd like.
 */
-
+manager.addEmployee("Coach")
 //CODE HERE 
 
 /*
     Call the `getEmployees` method on the
-    `manager` object again to confirm 
+    `manager` object again to confirm
     that an employee was added.
 */
 
 //CODE HERE
+manager.getEmployees()
